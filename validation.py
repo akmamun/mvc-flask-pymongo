@@ -20,3 +20,6 @@ class Validator(object):
         if field in element:
             if self.validate_type(element[field], fields[field]):
                 return True
+    def validate(self, element, fields, required_fields, optional_fields):
+            if not self.validateTypes(element, fields):
+                raise ValueError("Invalid type of field")
