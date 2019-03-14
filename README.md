@@ -30,7 +30,7 @@ fields = {
     "created"   : "datatime"
 } 
 ```
-- Update required fields, optional fields from todo [model](src/model/todo)
+- Update required fields, optional fields from todo [model](src/model/todo.py)
 ```py
 create_required_fields = []  # example create_required_fields = ["title", "body"]
 create_optional_fields = []  # example create_required_fields = ["time"]
