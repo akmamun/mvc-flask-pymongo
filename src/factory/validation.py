@@ -1,6 +1,5 @@
 from datetime import datetime
 
-
 class Validator(object):
    def validate_type(self, element, desired_type):
        if desired_type == 'int':
