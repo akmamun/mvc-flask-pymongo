@@ -21,7 +21,7 @@ pip install -r requirements.txt
 ```
 #### From [model](src/model) folder write your individual database collection name and field type
 #### Example
-- In todo [model](src/model/todo) update collection name and fields types
+- In todo [model](src/model/todo.py) update collection name and fields types
 ```py
 collection_name = 'todo'
 fields = {
