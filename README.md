@@ -1,4 +1,4 @@
-## Model based Customer Validator design for Python (Flask)
+## Model based Custom Validator design for Python (Flask)
 
 <p align="center">
   <img width="220" height="130" src="https://kenya-tech.com/wp-content/uploads/2019/01/flask-python.png">
