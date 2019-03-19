@@ -1,3 +1,3 @@
 import json
 
-config = json.load(open('config.json'))  #load db in json format
+config = json.load(open('db_config.json'))  #load db in json format

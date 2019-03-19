@@ -1,14 +1,17 @@
-from validation import Validator
+from factory.validation import Validator
+from factory.database import Database
+
 
 class Todo(object):
     def __init__(self):
         self.validator = Validator()
+        self.db = Database()
+
         self.collection_name = 'collection_name'
 
         self.fields = {
-            "title"     : "string",
-            "body"      : "string",
-            "created"   : "datatime"
+            "title": "string",
+            "body": "string"
         }
 
         self.create_required_fields = ["title", "body"]
@@ -17,7 +20,7 @@ class Todo(object):
         self.create_optional_fields = []
 
         # Fields required for UPDATE
-        self.update_required_fields = ["title", "body"]
+        self.update_required_fields = []
 
         # Fields optional for UPDATE
         self.update_optional_fields = []
