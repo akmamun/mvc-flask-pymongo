@@ -11,7 +11,8 @@ class Todo(object):
 
         self.fields = {
             "title": "string",
-            "body": "string"
+            "body": "string",
+	    "created": "datetime"		
         }
 
         self.create_required_fields = ["title", "body"]
