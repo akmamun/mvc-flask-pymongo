@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__
+*.py[cod]
+*$py.class
+*.pyc
+
+
+# Distribution / packaging
+.Python
+env/
+
+# virtualenv
+.venv
+venv/
+ENV/
+# Rope project settings
+
+.idea/
+venv
+__pycache__/
+
