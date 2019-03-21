@@ -1,13 +1,13 @@
 from datetime import datetime
 
 from flask import Flask, request
-from model import todo  # call model file
+from models import todo  # call model file
 
 app = Flask(__name__)
 
 todo = todo.Todo()
 
-
+# todo routes
 @app.route('/todos/', methods=['POST'])
 def add_tasks():
     if request.method == "POST":
