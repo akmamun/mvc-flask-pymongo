@@ -12,7 +12,7 @@ class Todo(object):
         self.fields = {
             "title": "string",
             "body": "string",
-	        "created": "datetime"		
+            "created": "datetime"
         }
 
         self.create_required_fields = ["title", "body"]
@@ -31,3 +31,8 @@ class Todo(object):
         self.validator.validate(todo, self.fields, self.create_required_fields, self.create_optional_fields)
         res = self.db.insert(todo, self.collection_name)
         return "Inserted Id " + res
+
+    def find(self, todo):  # find all
+        res = self.db.find(todo, self.collection_name)
+        return str(res)
+
