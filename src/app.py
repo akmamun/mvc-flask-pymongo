@@ -1,6 +1,4 @@
-from datetime import datetime
-
-from flask import Flask, request
+from flask import Flask, request, jsonify
 from models import todo  # call model file
 
 app = Flask(__name__)
@@ -9,10 +7,14 @@ todo = todo.Todo()
 
 
 # todo routes
-
 @app.route('/todos/', methods=['GET'])
 def get_tasks():
-    return todo.find({})
+    return jsonify(todo.find({})), 200
+
+
+@app.route('/todos/<string:todo_id>', methods=['GET'])
+def get_task(todo_id):
+    return todo.find_by_id(todo_id), 200
 
 
 @app.route('/todos/', methods=['POST'])
@@ -20,10 +22,25 @@ def add_tasks():
     if request.method == "POST":
         title = request.form['title']
         body = request.form['body']
-        created = datetime.now()
-        response = todo.create({'title': title, 'body': body, 'created': created})
+        response = todo.create({'title': title, 'body': body})
         return response, 201
 
 
+@app.route('/todos/<string:todo_id>', methods=['PUT'])
+def update_tasks(todo_id):
+    if request.method == "PUT":
+        title = request.form['title']
+        body = request.form['body']
+        response = todo.update(todo_id, {'title': title, 'body': body})
+        return response, 201
+
+
+@app.route('/todos/<string:todo_id>', methods=['DELETE'])
+def delete_tasks(todo_id):
+    if request.method == "DELETE":
+        todo.delete(todo_id)
+        return "Record Deleted"
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
