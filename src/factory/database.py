@@ -36,10 +36,14 @@ class Database(object):
 
     def find_by_id(self, id, collection_name):
         found = self.db[collection_name].find_one({"_id": ObjectId(id)})
+        
         if found is None:
             return not found
+        
+        if "_id" in found:
+             found["_id"] = str(found["_id"])
 
-        return str(found)
+        return found
 
     def update(self, id, element, collection_name):
         criteria = {"_id": ObjectId(id)}
