@@ -1,7 +1,7 @@
-## Model Based Custom Validator design for Python (Flask)
-#### Model based custom validation for python. Use Flask server and mongo db. Integrate with any API development.  
+## Model Based Validator design for Flask (Python) and Mongo DB
+#### Model based custom validation for flask (python). Use Flask server and mongo db. Integrate with any SPA API development.  
 <p align="center">
-  <img width="280" height="160" src="https://kenya-tech.com/wp-content/uploads/2019/01/flask-python.png">
+  <img width="340" height="160" src="https://miro.medium.com/max/1266/1*vB-cUmm1_dBBt-4JtL0u5g.jpeg">
 </p>
 
 ### Create [virtual environment]('https://docs.python.org/3/library/venv.html) and install requirements 
